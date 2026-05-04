@@ -1,17 +1,18 @@
 # DevOps Demo App
 
-Application fil rouge de la formation.
+App fil rouge de la formation Coda. Service Node.js minimal, sert de support à tous les TP (J2 PR → J3 CI → J4 Docker/déploiement).
 
 ## Endpoints
 
-- `/` : réponse JSON simple
-- `/health` : healthcheck HTTP pour Docker/Kubernetes
-- `/metrics` : métriques Prometheus en texte brut
+- `/` — réponse JSON simple
+- `/health` — healthcheck HTTP, utile pour les probes de plateforme (Render / Fly / etc.)
+- `/metrics` — métriques au format texte
 
 ## Commandes
 
 ```bash
+npm ci
 npm test
 npm start
-docker build -t devops-app:1.0.0 .
+docker build -t devops-app:dev .
 ```
