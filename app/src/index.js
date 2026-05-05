@@ -117,7 +117,7 @@ const server = http.createServer((req, res) => {
     if (path === "/version") {
       writeJson(res, 200, {
         version: "1.0.0",
-        node: process.version
+        nodeVersion: process.version
       });
       return;
     }
