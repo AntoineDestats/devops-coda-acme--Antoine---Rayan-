@@ -1,6 +1,6 @@
-# DevOps Demo App
+# Acme Demo App
 
-App fil rouge de la formation Coda. Service Node.js minimal, sert de support à tous les TP (J2 PR → J3 CI → J4 Docker/déploiement).
+Starter technique de la formation Coda. Service Node.js minimal pour pratiquer PR, CI, Docker et GHCR sans écrire d'application métier.
 
 ## Endpoints
 
@@ -12,7 +12,9 @@ App fil rouge de la formation Coda. Service Node.js minimal, sert de support à 
 
 ```bash
 npm ci
+npm run lint
 npm test
+npm run build
 npm start
 docker build -t devops-app:dev .
 ```
