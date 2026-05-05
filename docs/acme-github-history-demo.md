@@ -29,6 +29,8 @@ Then ask students to estimate:
 - MTTR.
 - Change Failure Rate.
 
+Important: use Git commit/tag dates for the synthetic timeline. GitHub Releases were created after the fact for navigation convenience, so their GitHub "published" timestamps reflect the setup date, not the fake Acme production dates.
+
 ## Suggested commands
 
 ```bash
@@ -45,6 +47,8 @@ gh repo view
 gh run list --limit 10
 gh api 'repos/:owner/:repo/tags'
 ```
+
+Avoid using `gh release list` for date calculations in this demo. It shows when the GitHub Release objects were created, not the backdated synthetic tag dates.
 
 ## Synthetic release timeline
 
