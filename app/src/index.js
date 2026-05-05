@@ -114,10 +114,26 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (path === "/version") {
+      writeJson(res, 200, {
+        version: "1.0.0",
+        nodeVersion: process.version
+      });
+      return;
+    }
+
     if (path === "/") {
       writeJson(res, 200, { status: "ok", result: add(2, 3) });
       return;
     }
+
+    if (path === "/uptime") {
+      writeJson(res, 200, {
+      uptimeSeconds: Math.round(process.uptime())
+      });
+      return;
+    }
+
 
     statusCode = 404;
     writeJson(res, statusCode, { error: "Not found" });
