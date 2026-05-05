@@ -18,3 +18,4 @@ npm run build
 npm start
 docker build -t devops-app:dev .
 ```
+"test" 
